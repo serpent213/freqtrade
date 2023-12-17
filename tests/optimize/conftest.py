@@ -47,18 +47,19 @@ def hyperopt(hyperopt_conf, mocker):
 def hyperopt_results():
     return pd.DataFrame(
         {
-            'pair': ['ETH/USDT', 'ETH/USDT', 'ETH/USDT', 'ETH/USDT'],
-            'profit_ratio': [-0.1, 0.2, -0.12, 0.3],
-            'profit_abs': [-0.2, 0.4, -0.21, 0.6],
-            'trade_duration': [10, 30, 10, 10],
-            'amount': [0.1, 0.1, 0.1, 0.1],
-            'exit_reason': [ExitType.STOP_LOSS, ExitType.ROI, ExitType.STOP_LOSS, ExitType.ROI],
+            'pair': ['ETH/USDT', 'ETH/USDT', 'ETH/USDT', 'ETH/USDT', 'ETH/USDT'],
+            'profit_ratio': [-0.1, 0.2, -0.12, 0.3, -0.7],
+            'profit_abs': [-0.2, 0.4, -0.21, 0.6, -1.4],
+            'trade_duration': [10, 30, 10, 10, 20],
+            'amount': [0.1, 0.1, 0.1, 0.1, 0.1],
+            'exit_reason': [ExitType.STOP_LOSS, ExitType.ROI, ExitType.STOP_LOSS, ExitType.ROI, ExitType.ROI],
             'open_date':
             [
                 datetime(2019, 1, 1, 9, 15, 0),
                 datetime(2019, 1, 2, 8, 55, 0),
                 datetime(2019, 1, 3, 9, 15, 0),
                 datetime(2019, 1, 4, 9, 15, 0),
+                datetime(2023, 1, 4, 9, 15, 0),
             ],
             'close_date':
             [
@@ -66,6 +67,7 @@ def hyperopt_results():
                 datetime(2019, 1, 2, 9, 25, 0),
                 datetime(2019, 1, 3, 9, 25, 0),
                 datetime(2019, 1, 4, 9, 25, 0),
+                datetime(2023, 1, 4, 9, 25, 0),
             ],
         }
     )
