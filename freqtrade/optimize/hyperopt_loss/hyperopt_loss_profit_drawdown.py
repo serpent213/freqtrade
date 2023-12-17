@@ -24,6 +24,7 @@ class ProfitDrawDownHyperOptLoss(IHyperOptLoss):
 
         try:
             max_drawdown_abs = calculate_max_drawdown(results, value_col="profit_abs")[5]
+            max_drawdown_abs = 1 if max_drawdown_abs > 1 else max_drawdown_abs
         except ValueError:
             max_drawdown_abs = 0
 
